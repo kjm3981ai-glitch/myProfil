@@ -1,0 +1,20 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor and temporary files
+*.tmp
+*.temp
+~$*
+.vscode/
+.idea/
+
+.vercel
+.tmp_hwp/
+
+# Private source materials (not part of the public website)
+*.hwp
+*.pdf
+강사 브랜딩 설득형 랜딩페이지 기획서.txt
+랜딩페이지 기획서 검토.txt
+assets/profile-kim-jeongmin.jpg
