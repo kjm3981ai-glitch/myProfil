@@ -14,6 +14,26 @@ document.querySelectorAll('.faq button').forEach((button) => button.addEventList
 const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); } }), { threshold: .1 });
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+const scheduleModal = document.querySelector('[data-schedule-modal]');
+if (scheduleModal) {
+  const closeSchedule = () => {
+    scheduleModal.hidden = true;
+    document.body.classList.remove('modal-open');
+  };
+  const openSchedule = () => {
+    scheduleModal.hidden = false;
+    document.body.classList.add('modal-open');
+    scheduleModal.querySelector('[data-schedule-close]').focus();
+  };
+  document.querySelectorAll('[data-schedule-open]').forEach((button) => button.addEventListener('click', openSchedule));
+  scheduleModal.querySelector('[data-schedule-close]').addEventListener('click', closeSchedule);
+  scheduleModal.addEventListener('click', (event) => {
+    if (event.target === scheduleModal) closeSchedule();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !scheduleModal.hidden) closeSchedule();
+  });
+}
 if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
 const form = document.querySelector('#inquiry');

@@ -44,7 +44,8 @@
                     <h2>반복 업무를<br>교육의 주제로<br>바꿔보세요.</h2>
                     <p>가장 많은 시간을 빼앗는 업무를 알려주세요. 실제 업무에 적용할 교육을 설계합니다.</p>
                     <div class="contact-links"><a href="mailto:Kjm3981ai@gmail.com">이메일 문의</a><a
-                            href="tel:01024883981">전화 문의</a></div>
+                            href="tel:01024883981">전화 문의</a><button class="schedule-open" type="button"
+                            data-schedule-open>강의 일정 보기</button></div>
                 </div>
                 <form id="inquiry" class="inquiry-form" novalidate>
                     <header><span>기업교육 문의</span>
@@ -97,7 +98,16 @@
             </div>
         </section>
     
-    </main>
+        <div class="schedule-modal" data-schedule-modal hidden>
+            <div class="schedule-dialog" role="dialog" aria-modal="true" aria-labelledby="schedule-title">
+                <button class="schedule-close" type="button" data-schedule-close aria-label="강의 일정 닫기">×</button>
+                <i class="eyebrow">LECTURE SCHEDULE</i>
+                <h3 id="schedule-title">강의 일정</h3>
+                <ul>
+                    <li><time datetime="2026-09-19">09.19</time><span>오프라인 강의 - "MCP와 A2A"</span></li>
+                </ul>
+            </div>
+        </div>    </main>
     <footer>
         <div class="wrap"><a class="footer-lab" href="https://hanconyeon.com/" target="_blank" rel="noopener"><img src="https://ai-homepage-prompt.vercel.app/logo.png" alt="한국AI콘텐츠연구소" onerror="this.style.display='none'"><span><strong>한국AI콘텐츠연구소</strong><small>KOREA AI CONTENTS LAB</small></span></a><span>© 2026 한국AI콘텐츠연구소 <a href="mailto:Kjm3981ai@gmail.com">이메일 문의</a><a href="#top">맨 위로 ↑</a></span></div>
     </footer>

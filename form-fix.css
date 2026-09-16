@@ -23,3 +23,18 @@
 .contact .inquiry-form .privacy-check span{display:inline!important;width:auto!important;color:var(--ink)!important;line-height:1.45!important}
 .contact .inquiry-form .privacy-box details{flex:0 0 auto!important;margin:0!important}
 .contact .inquiry-form .privacy-box .consent-guide{flex:0 0 100%!important}
+
+.contact-links button{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border:1px solid #ffffff40;border-radius:999px;background:#ffffff12;color:white;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.contact-links button:hover{background:#ffffff20}
+.modal-open{overflow:hidden}
+.schedule-modal[hidden]{display:none!important}
+.schedule-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(6,17,42,.62);backdrop-filter:blur(8px)}
+.schedule-dialog{position:relative;width:min(420px,100%);padding:32px;border:1px solid #dbe4f2;border-radius:24px;background:white;color:var(--ink);box-shadow:0 25px 80px rgba(6,17,42,.32)}
+.schedule-dialog h3{margin:8px 0 20px;font-size:28px;letter-spacing:-.03em}
+.schedule-dialog ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.schedule-dialog li{display:grid;grid-template-columns:68px 1fr;gap:12px;align-items:start;padding:15px;border-radius:15px;background:#f3f6fb}
+.schedule-dialog time{color:var(--blue);font:800 17px Manrope}
+.schedule-dialog span{font-weight:800;line-height:1.55}
+.schedule-close{position:absolute;right:18px;top:16px;width:34px;height:34px;border:0;border-radius:50%;background:#eef3fb;color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
+.schedule-close:hover{background:#dfe9f8}
+@media(max-width:620px){.schedule-dialog{padding:26px 20px}.schedule-dialog li{grid-template-columns:1fr;gap:4px}}
