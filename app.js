@@ -17,6 +17,7 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
 const form = document.querySelector('#inquiry');
+if (form) {
 const consent = form.querySelector('[name="privacy_consent"]');
 const submitButton = form.querySelector('[type="submit"]');
 const consentGuide = form.querySelector('.consent-guide');
@@ -57,3 +58,4 @@ form.addEventListener('submit', async (event) => {
     setConsentState();
   }
 });
+}
